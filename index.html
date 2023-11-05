@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Two-Digit Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #result {
+            font-size: 74px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: green;
+            margin-bottom: 30px;
+        }
+
+        #generateBtn {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result"><span id="randomNumber"></span></div>
+    <button id="generateBtn">Generate Random Number</button>
+
+    <script>
+        document.getElementById('generateBtn').addEventListener('click', function() {
+            var randomNumber = Math.floor(Math.random() * 90) + 10; // Generates a random number between 10 and 99
+            document.getElementById('randomNumber').textContent = randomNumber;
+        });
+    </script>
+</body>
+
+</html>
